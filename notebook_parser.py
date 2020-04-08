@@ -200,5 +200,5 @@ for i in range(len(kernels)):
     print("notebook: #", i, "number of code blocks", len(res[i]), "time: ", end_time - start_time)
 
 out_df = pd.concat(res)
-# out_df.to_csv('~/Desktop/code_blocks.csv', sep='\t', encoding='utf-8')
-print(out_df.to_json(orient = 'table'))
+out_df.to_csv('~/Desktop/code_blocks.csv', sep='\t', encoding='utf-8')
+out_df.to_json('~/Desktop/code_blocks.json', orient = 'index')
