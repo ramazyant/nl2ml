@@ -50,12 +50,11 @@ def block_preproc(blocks_arr, key, block_type):
                     blocks_arr[i] = blocks_arr[i - 1]
 
     for i in range(len(blocks_arr)):
-        blocks_arr[i] = blocks_arr[i].replace(r'\\\u0022', '"')
-        blocks_arr[i] = blocks_arr[i].replace(r'\\u0027', "'")
-        # blocks_arr[i] = blocks_arr[i].replace('**', ")
+        blocks_arr[i] = re.sub(r'\\\\\\u0022|\\u0027', "'", blocks_arr[i])
         blocks_arr[i] = re.sub(r'\\u00..', '', blocks_arr[i])
         blocks_arr[i] = re.sub(r'\\\\n', '\n', blocks_arr[i])
         blocks_arr[i] = re.sub(r'\\', '', blocks_arr[i])
+        blocks_arr[i] = re.sub(key, '', blocks_arr[i])
         '''             ??????????????????????
         blocks_arr[i] = re.sub(r'\\\\\\', '', blocks_arr[i])
         blocks_arr[i] = re.sub(r'\\\\', '', blocks_arr[i])
