@@ -55,11 +55,6 @@ def block_preproc(blocks_arr, key, block_type):
         blocks_arr[i] = re.sub(r'\\\\n', '\n', blocks_arr[i])
         blocks_arr[i] = re.sub(r'\\', '', blocks_arr[i])
         blocks_arr[i] = re.sub(key, '', blocks_arr[i])
-        '''             ??????????????????????
-        blocks_arr[i] = re.sub(r'\\\\\\', '', blocks_arr[i])
-        blocks_arr[i] = re.sub(r'\\\\', '', blocks_arr[i])
-        '''
-        blocks_arr[i] = re.sub(key, '', blocks_arr[i])
         if block_type == 'tag':
             blocks_arr[i] = blocks_arr[i].lower()
             blocks_arr[i] = re.sub(r'[^a-z0-9\s]', '', blocks_arr[i])
