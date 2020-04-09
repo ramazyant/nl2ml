@@ -175,16 +175,17 @@ df_1 = pd.read_csv('~/Desktop/kaggle_kernels/kaggle_kernels_hotness.csv')
 df_2 = pd.read_csv('~/Desktop/kaggle_kernels/kaggle_kernels_scoreAscending.csv')
 df_3 = pd.read_csv('~/Desktop/kaggle_kernels/kaggle_kernels_scoreDescending.csv')
 df_4 = pd.read_csv('~/Desktop/kaggle_kernels/kaggle_kernels_voteCount.csv')
-df_5 = pd.read_csv('~/Desktop/kaggle_kernels/kk_2/4/2020.csv')
-df_6 = pd.read_csv('~/Desktop/kaggle_kernels/kk_4/4/2020.csv')
+df_5 = pd.read_csv('~/Desktop/kaggle_kernels/kk_2_4_2020.csv')
+df_6 = pd.read_csv('~/Desktop/kaggle_kernels/kk_4_4_2020.csv')
 df_7 = pd.read_csv('~/Desktop/kaggle_kernels/kk_6_4_2020.csv')
+df_8 = pd.read_csv('~/Desktop/kaggle_kernels/kk_8_4_2020.csv')
 
-df = pd.concat(df_1, df_2, df_3, df_4, df_5, df_6, df_7)
+df = pd.concat([df_1, df_2, df_3, df_4, df_5, df_6, df_7, df_8])
 '''
-'''                         FOR MULTIPLE KERNEL RUN
+'''                         FOR MULTIPLE KERNEL TEST RUN
 df = pd.read_csv('~/Desktop/kk_duplicate.csv')
 '''
-'''                         FOR 1 KERNEL RUN
+'''                         FOR 1 KERNEL TEST RUN
 df = pd.read_csv('~/Desktop/kk.csv')
 '''
 df = pd.read_csv('~/Desktop/kk.csv')
